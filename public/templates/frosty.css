@@ -1,0 +1,186 @@
+/* ************************************************************
+:: Template Name: Frosty
+:: Template Author Name: Bayological.eth
+:: Template Author URI: bayological.eth.link
+:: Version: 1.0.0
+:: Created: 14 Aug 2021
+************************************************************ */
+
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+      @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+      body {
+        background-image: linear-gradient(40deg, #adccbd 0%, #576a9c 100%);
+        background-position: 0% 0%;
+        background-repeat: repeat;
+        background-size: auto;
+        overflow: hidden;
+
+        min-width: 320px;
+        min-height: 100vh;
+        line-height: 1;
+        word-wrap: break-word;
+        overflow-x: hidden;
+      }
+
+      .card-wrap {
+        display: flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        align-items: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        min-height: 100vh;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+      }
+
+      .card {
+        display: flex;
+        position: relative;
+        max-width: 100%;
+        z-index: 1;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 0;
+        flex-shrink: 0;
+        text-align: center;
+        background: rgba(184, 195, 119, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
+        font-family: 'VT323', monospace;
+        color: #ffffff;
+        transform-style: preserve-3d;
+      }
+
+      .card-content {
+        position: relative;
+        z-index: 1;
+        border-radius: inherit;
+        padding: 3rem 2rem;
+        max-width: 100%;
+        width: 25rem;
+      }
+
+      .card-avatar {
+        border-radius: 50%;
+        max-width: 70%;
+        margin-top: 4%;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .card h3 {
+        letter-spacing: -0.025rem;
+        width: 100%;
+        font-size: 2.25em;
+        line-height: 1.25;
+        font-weight: 300;
+        animation: neon 3s infinite;
+        letter-spacing: 6px;
+        color: lightgray;
+      }
+
+      .card p {
+        font-size: 1.5em;
+        margin: 0;
+      }
+      
+      #desc {
+        margin-bottom: 10%;
+      }
+
+      #split {
+        width: 100%;
+        position: relative;
+        border-top: solid 1px rgba(40,40,43,0.149);
+        height: 1px;
+        margin-top: -0.5px;
+      }
+
+      #icons a {
+        background-color: rgba(40,40,43,0.051); 
+      }
+
+      #icons li a {
+        border-radius: 100%;
+        width: 2em;
+        height: 2em;
+        text-decoration: none;
+        display: flex;
+        -moz-align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+      }
+
+      #icons {
+        font-size: 1.25em;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      #icons li {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        z-index: 1;
+      }
+
+      :root {
+        --shadow-color: lightskyblue;
+        --shadow-color-light: white;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      #footer {
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      #footer img {
+        width: 15%;
+      }
+
+      @keyframes neon {
+        0% {
+          text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light),
+            1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+            0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+            0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color),
+            0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+        }
+        50% {
+          text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light),
+            1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+            0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+            0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color),
+            0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+        }
+        100% {
+          text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light),
+            1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+            0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+            0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color),
+            0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+        }
+      } 

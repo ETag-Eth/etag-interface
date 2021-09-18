@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>[[TAG.NAME]] | Etag.eth</title>
+    <link rel="stylesheet" href="https://res.cloudinary.com/dl0ui9shk/raw/upload/v1629348625/Etag/frosty.css" />
+    <!-- <link rel="stylesheet" href="./frosty.css" /> -->
+    <script src="https://kit.fontawesome.com/9882db362a.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="card-wrap">
+      <figure class="card" data-tilt>
+        <div class="card-content">
+          <img src="https://ipfs.fleek.co/ipfs/[[TAG.AVATAR]]" class="card-avatar" />
+
+          <figcaption>
+            <h3>[[TAG.NAME]]</h3>
+            <p id="desc">[[TAG.DESC]]</p>
+
+            <hr id="split" />
+
+            <ul id="icons">
+              <li>
+                <a target="_blank" href="mailto:[[TAG.EMAIL]]"><i class="far fa-envelope"></i></a>
+              </li>
+              <li>
+                <a target="_blank" href="https://twitter.com/[[TAG.TWITTER]]">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://instagram.com/[[TAG.INSTA]]">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </figcaption>
+        </div>
+      </figure>
+    </div>
+
+    <!-- <div id="footer">
+      <img src="https://res.cloudinary.com/dl0ui9shk/image/upload/v1628862320/logo-light_bd7ocl.png" />
+    </div> -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script>
+      'use strict';
+
+      $('.card').tilt({
+        maxTilt: 30,
+        perspective: 1400,
+        easing: 'cubic-bezier(.03,.98,.52,.99)',
+        speed: 1200,
+        glare: true,
+        maxGlare: 0.2,
+        scale: 1.04
+      });
+
+      const web3 = new Web3('https://cloudflare-eth.com');
+
+      async function getBlockNumber() {
+        const latestBlockNumber = await web3.eth.getBlockNumber();
+        console.log(latestBlockNumber);
+        $('#test').text(`Latest Block: ${latestBlockNumber}`);
+        return latestBlockNumber;
+      }
+
+      getBlockNumber();
+    </script>
+  </body>
+</html>
